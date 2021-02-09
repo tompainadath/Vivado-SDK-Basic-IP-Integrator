@@ -1,5 +1,5 @@
 # Vivado-SDK-Basic-IP-Integrator
-Summary
+#Summary
 The lab analyses different functions of Vivado’s SDK IP Integrator. For this basic IP integrator was explored. A block design with two GPIO interfaces was created in the Vivado software. An SDK FreeRTOS template was imported and was modified to input switches and output LEDs. Programmed the system to let the LEDs behave certain way according to inputs from switches by switching between tasks. The motivation for this analysis was to understand concept of task management in Embedded Systems. The results were as expected. Successfully synthesized the block design and the system behaved the way desired.
 Introduction
 The object of the lab was to control the behavior of LEDs on the zybo board using the switches using FeeRTOS tasks.
