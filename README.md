@@ -1,12 +1,12 @@
 # Vivado-SDK-Basic-IP-Integrator
 # Summary
 The lab analyses different functions of Vivado’s SDK IP Integrator. For this basic IP integrator was explored. A block design with two GPIO interfaces was created in the Vivado software. An SDK FreeRTOS template was imported and was modified to input switches and output LEDs. Programmed the system to let the LEDs behave certain way according to inputs from switches by switching between tasks. The motivation for this analysis was to understand concept of task management in Embedded Systems. The results were as expected. Successfully synthesized the block design and the system behaved the way desired.
-Introduction
+# Introduction
 The object of the lab was to control the behavior of LEDs on the zybo board using the switches using FeeRTOS tasks.
 Task 1: Create a FreeRTOS task TaskLED that has the LED count and display start at 0 (0000) and increase as a somewhat random sequence as listed then repeats the sequence starting at 0 (with a delay of approximately 1 second and at the Idle task priority +1 (tskIDLE_PRIORITY+1). The sequence is as follows:
 0000, 1001, 0110, 1010, 0001, 0101, 1000, 0100, 1100, 1110, 0010, 1011, 1101, 0011, 0111, 1111
 Task 2: Create a FreeRTOS task TaskSW that reads the SWs at the Idle task priority+ 1. Within the FreeRTOS task TaskSW if SW0 is ON and no other SWs are ON then TaskLED is suspended (vTaskSuspend()). If SW1 is ON and no other SWs are ON then TaskLED is resumed (vTaskResume()).
-Discussion
+# Discussion
 Created a block design consisting of ZYNQ7 processing system, processor system reset, AXI Interconnect and two AXI GPIOs. The diagram of the design is shown below:
  
 Figure 1. Diagram of the Hardware design
@@ -42,5 +42,5 @@ Figure 10. When SW1 is ON
  
 Figure 11. When SW1 is ON
 
-Conclusions
+# Conclusions
 Successfully generated a hardware design using Vivado software and implemented the tasks on Zybo board by programming in C using SDK. The main object of the lab was to create tasks and manage them based of the specifications. The project results met the objectives as expected. 
